@@ -3,9 +3,8 @@
 		$username=$_POST ["username"];
 		$password=$_POST ["password"];
 		if ($username == "Diponkar" && $password=="321456"){
-			//setcookie("username",$username,time()+60);
-			session_start();
-			$_SESSION["username"]=$username;
+			setcookie("username",$username,time()+60);
+			
 			header("Location: dashboard.php");
 			
 		}
