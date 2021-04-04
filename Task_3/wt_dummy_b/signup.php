@@ -1,9 +1,12 @@
-<?php include 'main_header.php';?>
+<?php include 'main_header.php';
+		require_once 'controllers/LoginControler.php';
+
+?>
 <?php
 	$name="";
 	$err_name="";
 	$hasError = false;
-	if($_SERVER["REQUEST METHOD"] == "POST"){
+	if(isset($_POST[sign_up])){
 		if(empty($_POST["name"])){
 			$hasError = true;
 			$err_name="<br>Name requred";

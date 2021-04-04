@@ -20,6 +20,7 @@
 			
 			<a href="signup.php" >Not registered yet? Sign Up</a>
 		</div>
+		</form>
 </div>
 
 <!--login ends -->
