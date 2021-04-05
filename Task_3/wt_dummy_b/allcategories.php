@@ -1,4 +1,11 @@
-<?php include 'admin_header.php';?>
+<?php include 'admin_header.php';
+	require_once'controllers/Categorycontroller.php';
+	$categories = getAllCategories();
+	//echo"<pre>";
+	//print_r($categories);
+	//echo"</pre>";
+
+?>
 <!--All Categories starts -->
 
 <div class="center">
@@ -13,6 +20,19 @@
 			
 		</thead>
 		<tbody>
+			<?php
+				foreach($categories as $category){
+					
+					echo"<tr>";
+					echo"<td>".$category["name"]."</td>";
+					echo"<td>".$category["id"]."</td>";
+					echo'<td><a herf="editactegory.php"class="btn btn=success">Edit</a></td>';
+					echo'<td><a class ="btn btn=danger">Delete</td>';
+					echo"</td>"
+				}
+			
+			?>
+		
 			<td>1</td>
 			<td>Groserry</td>
 			<td>100</td>
