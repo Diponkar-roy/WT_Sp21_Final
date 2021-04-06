@@ -20,21 +20,31 @@
 
 
 ?>
-<html>
-	<body>
-		<form action="" method="post">
-			<input type ="text" name="uname" placeholder="usename"><br>
-			<input type ="text" name="unum" placeholder="ID"><br>
-			<input type ="text" name="unum" placeholder="DOB"><br>
-			<input type ="text" name="unum" placeholder="Credit"><br>
-			<input type ="text" name="unum" placeholder="CGPA"><br>
-			<input type ="text" name="unum" placeholder="Dept_ID"><br>
-			<input type ="submit" value="register">
+<table border="1" style="border-collapse:collapse;">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Date of Birth</th>
+			<th>Credit</th>
+			<th>CGPA</th>
+			<th>Department</th>
+			<th colspan="2">Operation</th>
+		</tr>
 		
-		</form>
+<?php
+	foreach($result as $row){
+		echo "<tr>";
+		echo "<td>".$row["id"]."</td>";
+		echo "<td>".$row["name"]."</td>";
+		echo "<td>".$row["dob"]."</td>";
+		echo "<td>".$row["credit"]."</td>";
+		echo "<td>".$row["cgpa"]."</td>";
+		echo "<td>".$row["dept_id"]."</td>";
+		echo "<td><a href=''> Edit </a></td>";
+		echo "<td><a href=''> Delete </a></td>";
+		echo "</tr>";
+	}
 	
-	</body>
 
-
-
-</html>
+?>
+</table>
